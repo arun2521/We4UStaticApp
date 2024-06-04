@@ -1,0 +1,147 @@
+.nav_header {
+  padding: 1.5rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  .w {
+    background: linear-gradient(45deg, #cb4d52, #ce8f7f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+
+  .four {
+    color: rgb(236, 109, 152);
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .middle_text {
+    display: flex;
+    gap: 20px;
+
+    h6 {
+      padding: 0.7rem 1.5rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    h6:hover {
+      border-radius: 0.7rem;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      color: black;
+      border-color: #ff9a9e;
+    }
+  }
+
+  .login_div {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+    h4,
+    h5 {
+      font-size: 1.1rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: 0.7rem;
+      cursor: pointer;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    h4 {
+      border: 1px solid #c6bebe;
+    }
+
+    h4:hover {
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      border-color: #ff9a9e;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transform: scale(1.02);
+      transition: all 0.3s ease;
+    }
+
+    h5 {
+      border: 1px solid #c6bebe;
+      background-color: black;
+      color: white;
+    }
+
+    h5:hover {
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      color: black;
+      border-color: #ff9a9e;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transform: scale(1.02);
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+/* Media Query for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .nav_header {
+    padding: 1rem 3rem;
+
+    .middle_text {
+      display: none;
+    }
+
+    .login_div {
+      h4,
+      h5 {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+      }
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+}
+
+/* Media Query for Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .nav_header {
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+
+    .logo {
+      margin-bottom: 1rem;
+    }
+
+    .middle_text {
+      display: none;
+    }
+
+    .login_div {
+      flex-direction: column;
+      gap: 20px;
+      align-items: stretch;
+
+      h4,
+      h5 {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+}
